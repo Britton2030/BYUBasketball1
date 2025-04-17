@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BYU Scratch Page</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #002654;
+    }
+
+    nav {
+      background-color: #002654;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background: url('Website Jazz Picture.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .section {
+      background: white;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .players {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .player-era {
+      flex: 1 1 30%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .tableauPlaceholder {
+      background: #ccc;
+      height: 400px;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-style: italic;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-link a {
+      color: #002654;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .fun-facts ul {
+      list-style-type: square;
+      padding-left: 1.25rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-box {
+      background: #e6f0ff;
+      padding: 1rem 2rem;
+      border-left: 6px solid #002654;
+      font-style: italic;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="wordle.html">Wordle Game</a>
+    <a href="#players">Players</a>
+    <a href="#video">Top Wins</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <header>
+    <h1>BYU Basketball Scratch Page</h1>
+    <p>Testbed for features and fun content</p>
+  </header>
+
+  <section class="section" id="players">
+    <h2>Top BYU Players by Era</h2>
+    <div class="players">
+      <div class="player-era">
+        <strong>1970s</strong>
+        <p>Kresimir Cosic</p>
+        <p>Danny Ainge</p>
+        <p>Jeff Chapman</p>
+      </div>
+      <div class="player-era">
+        <strong>2000s</strong>
+        <p>Lee Cummard</p>
+        <p>Keena Young</p>
+        <p>Trent Plaisted</p>
+      </div>
+      <div class="player-era">
+        <strong>2010s</strong>
+        <p>Tyler Haws</p>
+        <p>Jimmer Fredette</p>
+        <p>Kyle Collinsworth</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <h2>Top Road Wins</h2>
+    <iframe src="https://www.youtube.com/embed/haHl5KnyfIw" allowfullscreen></iframe>
+  </section>
+
+  <section class="section">
+    <h2>Game Summary Dashboard</h2>
+    <div class="tableauPlaceholder">[Tableau Placeholder Here]</div>
+  </section>
+
+  <section class="section fun-facts">
+    <h2>Fun Facts About BYU Basketball</h2>
+    <ul>
+      <li>Jimmer Fredette scored 52 points in an NCAA tournament game.</li>
+      <li>BYU has over 30 NCAA tournament appearances.</li>
+      <li>The Marriott Center is one of the largest on-campus arenas in the country.</li>
+    </ul>
+  </section>
+
+  <section class="section quote-box">
+    "When you play hard and play smart, you make Cougar Nation proud." – Coach Dave Rose
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Player & Game Highlights</h2>
+    <div class="gallery">
+      <img src="highlight1.jpg" alt="Highlight 1">
+      <img src="highlight2.jpg" alt="Highlight 2">
+      <img src="highlight3.jpg" alt="Highlight 3">
+    </div>
+  </section>
+
+  <section class="back-link">
+    <a href="index.html">&larr; Back to Home Page</a>
+  </section>
+</body>
+</html>

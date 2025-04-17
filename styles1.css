@@ -1,0 +1,146 @@
+<link href="styles1.css" rel="stylesheet" />
+```)*
+
+```css
+/* styles1.css for resume.html */
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+/* Hide unused nav */
+#mainNav {
+  display: none;
+}
+
+/* Header */
+header {
+  background: linear-gradient(45deg, #ee0979, #ff6a00);
+  color: #fff;
+  padding: 3rem 1rem;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header .col-md-4,
+header .col-md-8 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  header .col-md-8 {
+    text-align: left;
+    margin-left: 2rem;
+  }
+}
+header img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+header p {
+  font-size: 1.1rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+  color: #ee0979;
+}
+
+/* Experience / Education rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.row .col-8,
+.row .col-4 {
+  padding: 0.5rem;
+}
+.row .col-8 {
+  flex: 0 0 66.6666%;
+}
+.row .col-4 {
+  flex: 0 0 33.3333%;
+  text-align: right;
+}
+
+/* Lists */
+ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: #ee0979;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Resume entry layout */
+.resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .resume-left {
+    flex: 1;
+    padding-right: 1rem;
+  }
+  
+  .resume-right {
+    min-width: 160px;
+    text-align: right;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .resume-left h5 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #212529;
+  }
+  .headshot {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .headshot-lg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  

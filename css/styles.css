@@ -1,0 +1,241 @@
+/* ---------- Reset & Global ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #f8f9fa;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #002654;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ensure your .container.px-5 centers content */
+  .container.px-5 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* ---------- Navbar ---------- */
+  .navbar-custom {
+    background-color: #002654;
+    padding: 1rem 2rem;
+  }
+  .navbar-custom .navbar-link-left {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .navbar-custom .nav-link {
+    color: #fff;
+    margin-left: 1.5rem;
+    transition: color 0.2s;
+  }
+  .navbar-custom .nav-link:hover {
+    color: #ffc72c;
+  }
+  
+  /* ---------- Masthead (Hero) ---------- */
+  .masthead {
+    position: relative;
+    padding: 6rem 0;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .masthead::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 38, 84, 0.6);
+  }
+  .masthead .masthead-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+  .masthead .masthead-heading {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .masthead .masthead-subheading {
+    font-size: 1.25rem;
+  }
+  
+  /* ---------- Blog‑Style Sections ---------- */
+  section {
+    background: #fff;
+    margin: 2rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  section .container.px-5 {
+    padding: 2rem 0;
+  }
+  
+  /* Section Titles */
+  .top-players-heading,
+  #video h2,
+  #tableau-embed h2 {
+    font-family: 'Catamaran', sans-serif;
+    color: #002654;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Top Players “Post” */
+  .era-section {
+    margin-bottom: 1.5rem;
+  }
+  .era-section strong {
+    display: block;
+    color: #002654;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .era-section div {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Video Embed */
+  #video {
+    text-align: center;
+  }
+  #video iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 338px;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Tableau Embed */
+  #tableau-embed {
+    text-align: center;
+  }
+  .tableauPlaceholder {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  /* Responsive images/iframes */
+  img, iframe {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Small screen tweaks */
+  @media (max-width: 576px) {
+    .masthead .masthead-heading {
+      font-size: 2rem;
+    }
+    .masthead .masthead-subheading {
+      font-size: 1rem;
+    }
+  }
+  /* ─── Era Flex Layout ───────────────────────────────────────────────────────── */
+
+/* Wrap all your .era-section blocks in a div.era-container */
+.era-container {
+  display: flex;
+  flex-wrap: wrap;           /* allow wrapping on narrow screens */
+  justify-content: space-between;
+  gap: 2rem;                 /* gutters between columns */
+  margin-top: 2rem;
+}
+
+/* Each era becomes a flexible “card” */
+.era-section {
+  flex: 1 1 180px;           /* base‑width 180px, can grow or shrink */
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;     /* vertical breathing room */
+}
+
+/* Heading inside each card */
+.era-section strong {
+  display: block;
+  color: #002654;            /* BYU navy */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Player names */
+.era-section div {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+/* ─── Player Collage Grid ───────────────────────────────────────────────────── */
+.player-collage {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  width: 90%;
+  max-width: 800px;
+  padding: 0 1rem;
+  z-index: 1; /* sits above the masthead overlay */
+}
+
+.player-collage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.player-collage img:hover {
+  transform: scale(1.05);
+}
+
+/* make sure the masthead overlay doesn’t obscure the collage */
+.masthead::before {
+  background: rgba(0,38,84,0.4); /* lighten the dark overlay so images pop */
+}
+.masthead-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 38, 84, 0.5);
+  z-index: 0;
+}
+/* Center YouTube video nicely */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 338px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
